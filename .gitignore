@@ -1,0 +1,14 @@
+# 构建产物 / build artifact —— 由 build.mjs 从 src/ + vendor/ 生成，可完全复现
+# 需要预览请先执行：node build.mjs
+# index.html
+
+# 依赖 / dependencies
+node_modules/
+
+# macOS
+.DS_Store
+
+# 编辑器 / editors
+.vscode/
+.idea/
+*.swp
