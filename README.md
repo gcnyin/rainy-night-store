@@ -8,6 +8,14 @@ A hand-written rainy-night convenience-store diorama built with vanilla JavaScri
 
 ---
 
+## 生成说明 / Generation Note
+
+整个场景由 **deepseek-v4.1-flash** 模型搭配一份自然语言需求提示词**一次性完整生成**——包括全部 `src/` 源码、`template.html` 与 `build.mjs`，没有后续手工修补。提示词原文保存在 [`PROMPT.md`](./PROMPT.md)。
+
+The entire scene was **fully generated in a single shot** by the **deepseek-v4.1-flash** model from one natural-language prompt — all of `src/`, plus `template.html` and `build.mjs`, with no subsequent hand-editing. The original prompt is preserved in [`PROMPT.md`](./PROMPT.md).
+
+---
+
 ## 预览 / Preview
 
 构建后得到**单个 HTML 文件**，用浏览器直接打开即可，无需服务器：
@@ -87,6 +95,7 @@ Malformed values are silently ignored and the default pose is used.
 
 ```text
 rainy-night-store/
+├── PROMPT.md            # 生成场景所用的原始提示词 / original generation prompt
 ├── build.mjs            # 单文件打包脚本 / single-file bundler
 ├── template.html        # HTML 外壳与占位符 / shell + placeholders
 ├── src/                 # 按序号拼接的源码 / sources, concatenated in order
